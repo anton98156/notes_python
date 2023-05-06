@@ -8,6 +8,8 @@ while True:
     command_split = command.split()
     if command_split[0] == "add":
         UX.create_note()
+    elif command_split[0] == "editByID": 
+        UX.edit_noteByID(command_split[1])
     elif command_split[0] == "readByID": 
         UX.read_noteByID(command_split[1])
     elif command_split[0] == "readByDate": 

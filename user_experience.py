@@ -19,6 +19,13 @@ def read_noteByID(id):
             print(list1[i+3])
     data.close()
 
+def edit_noteByID(id):
+    path = 'log.csv'
+    data = open(path, 'a+')
+    # перезапись файла и удаление?
+    # перечитать ТЗ
+    data.close()
+
 def read_noteByDate(date):
     path = 'log.csv'
     data = open(path, 'r')
