@@ -19,6 +19,18 @@ def read_noteByID(id):
             print(list1[i+3])
     data.close()
 
+def read_noteByDate(date):
+    path = 'log.csv'
+    data = open(path, 'r')
+    list1 = [line.strip() for line in data.readlines()]
+    for i, lines in enumerate(list1):
+        if date in lines:
+            print(list1[i-1])
+            print(list1[i])
+            print(list1[i+1])
+            print(list1[i+2])
+    data.close()
+
 def read_notes():
     path = 'log.csv'
     data = open(path, 'r')

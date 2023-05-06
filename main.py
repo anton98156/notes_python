@@ -10,6 +10,8 @@ while True:
         UX.create_note()
     elif command_split[0] == "readByID": 
         UX.read_noteByID(command_split[1])
+    elif command_split[0] == "readByDate": 
+        UX.read_noteByDate(command_split[1])
     elif command_split[0] == "read" and command_split[1] == "all": 
         UX.read_notes()
     elif command_split[0] == "exit": 
