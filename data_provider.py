@@ -1,11 +1,7 @@
 def name_data():
-    data = str(input("Введите ФИО: "))
-    return data
-
-def phone_number_data():
-    data = str(input("Введите номер телефона: "))
+    data = str(input("Введите заголовок заметки: "))
     return data
 
 def description_data():
-    data = str(input("Введите описание: "))
+    data = str(input("Введите тело заметки: "))
     return data
