@@ -1,12 +1,14 @@
 import os
-import user_interface as ui
+import user_experience as UX
 
 os.system("clear")
 
 while True:
-    command = str(input("Введите команду: "))
+    command = str(input("\nВведите команду: "))
     if command == "add":
-        ui.create_note()
+        UX.create_note()
+    elif command == "read all": 
+        UX.read_note()
     elif command == "exit": 
         break
     else:
