@@ -13,5 +13,5 @@ def name_logger(data):
 
 def description_logger(data):
     with open('log.csv', 'a') as file:
-        file.write('\nТело заметки: {};\n'
+        file.write('\nТело заметки: {}.\n'
                    .format(data))

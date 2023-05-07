@@ -1,3 +1,4 @@
+import os
 import user_interface as UI
 
 def create_note():
@@ -6,8 +7,12 @@ def create_note():
     UI.description_view()
     print("Заметка успешно сохранена!")
 
+def edit_notes():
+    path = 'log.csv'
+    os.remove(path)
+    create_note()
 
-def read_noteByID(id):
+def read_note_by_id(id):
     path = 'log.csv'
     data = open(path, 'r')
     list1 = [line.strip() for line in data.readlines()]
@@ -19,14 +24,7 @@ def read_noteByID(id):
             print(list1[i+3])
     data.close()
 
-def edit_noteByID(id):
-    path = 'log.csv'
-    data = open(path, 'a+')
-    # перезапись файла и удаление?
-    # перечитать ТЗ
-    data.close()
-
-def read_noteByDate(date):
+def read_note_by_date(date):
     path = 'log.csv'
     data = open(path, 'r')
     list1 = [line.strip() for line in data.readlines()]
@@ -44,3 +42,7 @@ def read_notes():
     for line in data:
         print(line)
     data.close() 
+
+def delete_notes():
+    path = 'log.csv'
+    os.remove(path)
